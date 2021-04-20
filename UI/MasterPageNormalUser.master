@@ -1,0 +1,38 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageNormalUser.master.cs" Inherits="UI_MasterPageNormalUser" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Engineering Projects Management System</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%; height: 100%; z-index: 102; left: 0px; position: absolute; top: 0px;">
+            <tr>
+                <td colspan="2" style="height: 141px; background-color: inactivecaption;">
+                   <h2 align="center"> 
+                       <span style="font-size: 32pt; color: window; font-family: Verdana; background-color: transparent;">Task Mananement
+                           System</span></h2></td>
+            </tr>
+            <tr>
+                <td style="width: 195px; height: 356px; background-color: inactivecaptiontext;">
+                    <asp:Label ID="userNameLabel" runat="server" Style="z-index: 100; left: 21px; position: absolute;
+                        top: 185px" ForeColor="#284E98"></asp:Label>
+                    <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/UI/NormalUserUIPage.aspx"
+                        Style="z-index: 100; left: 23px; position: absolute; top: 240px">Home</asp:HyperLink>
+                    <asp:HyperLink ID="logoutHyperLink" runat="server" NavigateUrl="~/UI/LogoutPage.aspx"
+                        Style="z-index: 100; left: 23px; position: absolute; top: 270px">Logout</asp:HyperLink>
+                </td>
+                <td style="width: 950px; height: 522px;" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <span style="font-size: 10pt; font-family: Lucida Sans Unicode; background-color: gainsboro;"></span>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </form>
+</body>
+</html>

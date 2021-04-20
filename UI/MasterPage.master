@@ -1,0 +1,89 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="UI_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Engineering Projects Management System</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%; height: 100%; z-index: 102; left: 0px; position: absolute; top: 0px;">
+            <tr>
+                <td colspan="2" style="height: 141px; background-color: inactivecaption;">
+                   <h2 align="center"> 
+                       <span style="font-size: 32pt; color: window; font-family: Verdana; background-color: transparent;">Task Mananement
+                           System</span></h2></td>
+            </tr>
+            <tr>
+                <td style="width: 195px; background-color: inactivecaptiontext; height: 522px;" valign="top">
+                    <asp:Menu ID="menuMain" runat="server" style="z-index: 100; left: 19px; position: absolute; top: 296px; background-color: transparent;" BackColor="InactiveCaptionText" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px" TabIndex="2">
+                        <Items>
+                            <asp:MenuItem Text="Project" Value="Project Information">
+                                <asp:MenuItem NavigateUrl="~/UI/ProjectCreateUIPage.aspx" Text="Create a New Project"
+                                    Value="Create a New Project"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/ProjectEditUIPage.aspx" Text="Edit an Existing Project"
+                                    Value="Edit an Existing Project"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/ProjectAddEmployeeUIPage.aspx" Text="Add Employee(s) to Project"
+                                    Value="Add Employee(s) to Project"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/ProjectRemoveEmployeeUIPage.aspx" Text="Remove Employee from Project"
+                                    Value="Remove Employee from Project"></asp:MenuItem>
+                                <asp:MenuItem Text="Close a Project" Value="Close a Project" NavigateUrl="~/UI/ProjectCloseUIPage.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Task" Value="Task Information">
+                                <asp:MenuItem NavigateUrl="~/UI/TaskNewUIPage.aspx" Text="Create a Task" Value="Create a Task">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/TaskEditUIPage.aspx" Text="Edit an Existing Task"
+                                    Value="Edit an Existing Task"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/TaskUIPage.aspx" Text="All Tasks(View only)"
+                                    Value="Task and Comment Forward"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Employee" Value="Employee Information">
+                                <asp:MenuItem NavigateUrl="~/UI/EmployeeUIPage.aspx" Text="Create a new Employee"
+                                    Value="Create a new Employee"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/EmployeeEditUIPage.aspx" Text="Edit an Employee Information"
+                                    Value="Edit an Existing Employee Information"></asp:MenuItem>
+                                <asp:MenuItem Text="Add Employee(s) to Project" Value="Add Employee(s) to Project" NavigateUrl="~/UI/ProjectAddEmployeeUIPage.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/ProjectRemoveEmployeeUIPage.aspx" Text="Remove Employee from Project"
+                                    Value="Remove Employee from Project"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="User" Value="User Information" Target="0">
+                                <asp:MenuItem NavigateUrl="~/UI/UserUIPage.aspx" Text="Create a New User" Value="Create a New User">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Edit an Existing User" Value="Edit an Existing User" NavigateUrl="~/UI/UserEditUIPage.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Delete Existing User" Value="Delete Existing User" NavigateUrl="~/UI/UserRemoveUIPage.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Client" Value="Client Information" Target="0">
+                                <asp:MenuItem NavigateUrl="~/UI/ClientCreateUIPage.aspx" Text="Create a New Client"
+                                    Value="Create a New Client"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UI/ClientEditUIPage.aspx" Text="Edit a Client Information"
+                                    Value="Edit a Client Information"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="InactiveCaption" ForeColor="InactiveCaptionText" />
+                        <DynamicHoverStyle BackColor="InactiveCaption" ForeColor="InactiveCaptionText" />
+                    </asp:Menu>
+                    &nbsp;
+                    <asp:HyperLink ID="logOutHyperLink" runat="server" Height="1px" NavigateUrl="~/UI/LogoutPage.aspx"
+                        Style="z-index: 101; left: 20px; position: absolute; top: 242px" Width="89px" ForeColor="#284E98" TabIndex="1">Log Out</asp:HyperLink>
+                    <asp:HyperLink ID="homeHyperLink" runat="server" NavigateUrl="~/UI/AdimHomePage.aspx"
+                        Style="z-index: 102; left: 20px; position: absolute; top: 200px" ForeColor="#284E98">Home</asp:HyperLink>
+                    <asp:Label ID="userNameLabel" runat="server" ForeColor="#284E98" Height="1px" Style="position: static"></asp:Label></td>
+                <td style="width: 950px; height: 522px;" valign="top">
+                    <asp:ContentPlaceHolder ID="mainContentPlaceHolder" runat="server">
+                        <span style="font-size: 10pt; font-family: Lucida Sans Unicode; background-color: gainsboro;"></span>
+                    </asp:ContentPlaceHolder>
+                    </td>
+            </tr>
+        </table>
+    </div>
+        
+    </form>
+</body>
+</html>
